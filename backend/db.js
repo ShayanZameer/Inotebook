@@ -1,12 +1,13 @@
-const mongoose = require('mongoose');
-const mongoURI = "mongodb://localhost:27017/inotebook";
+const mongoose = require("mongoose");
+const mongoURI =
+  "mongodb://https://inotebook-lazw.onrender.com:27017/inotebook";
 
 const connectToMongo = async () => {
   try {
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      family: 4, 
+      family: 4,
     });
     console.log("CONNECTED TO MONGO YEAH");
   } catch (error) {
